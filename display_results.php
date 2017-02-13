@@ -17,8 +17,12 @@
         $error_message = 'Interest rate must be a valid number.'; 
     } else if ( $interest_rate <= 0 ) {
         $error_message = 'Interest rate must be greater than zero.'; 
+    }
+      else if (!($interest_rate <=  15)) {
+      	$error_message = 'Interest rate must be less than or equal to 15';
+    }
     // validate years
-    } else if ( $years === FALSE ) {
+    else if ( $years === FALSE ) {
         $error_message = 'Years must be a valid whole number.';
     } else if ( $years <= 0 ) {
         $error_message = 'Years must be greater than zero.';
